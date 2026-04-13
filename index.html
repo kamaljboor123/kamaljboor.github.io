@@ -474,6 +474,31 @@
             border-color: #00ff9d;
         }
 
+        /* ===== عداد الزوار ===== */
+        .visitor-counter {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .visitor-counter p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .visitor-counter img {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -835,6 +860,16 @@
                 <textarea placeholder="رسالتك..." id="message" rows="4" required></textarea>
                 <button type="submit" class="btn" style="width: 100%;">إرسال الرسالة</button>
             </form>
+        </div>
+        
+        <!-- ===== عداد الزوار ===== -->
+        <div class="visitor-counter">
+            <p>
+                👥 عدد زوار هذا الموقع: 
+                <img src="https://visitor-badge.laobi.icu/badge?page_id=kamaljboor123.github.io" 
+                     alt="عدد الزوار" 
+                     style="vertical-align: middle;" />
+            </p>
         </div>
     </section>
 
