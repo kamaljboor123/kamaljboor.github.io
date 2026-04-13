@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+ 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 0, 0, 0.3); padding: 0.5rem 1.2rem; border-radius: 50px; }
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: #00ff9d; color: #0a0a1f; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: 0.3s; z-index: 999; font-size: 1.5rem; }
+        .<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <!-- Google tag (gtag.js) --> 
@@ -96,6 +98,296 @@
         .visitor-counter p { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 0, 0, 0.3); padding: 0.5rem 1.2rem; border-radius: 50px; }
         .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: #00ff9d; color: #0a0a1f; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: 0.3s; z-index: 999; font-size: 1.5rem; }
         .back-to-top.show { opacity: 1; }
+        .back-to-top:hover { transform: translateY(-5px); }
+        @media (max-width: 768px) { .navbar { flex-direction: column; gap: 0.5rem; } .hero-content h1 { font-size: 2.2rem; } .projects-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 480px) { .hero-content h1 { font-size: 1.8rem; } .btn { padding: 1rem 2rem; } }
+    </style>
+</head>
+<body>
+    <div class="dynamic-bg">
+        <canvas id="particle-canvas"></canvas>
+        <div class="floating-words-bg">
+            <span>فكرة</span><span>إبداع</span><span>ابتكار</span><span>تحدي</span><span>ذكاء</span><span>منطق</span><span>رياضيات</span><span>إلهام</span>
+        </div>
+    </div>
+
+    <div class="auto-scroll-strip">
+        <div class="scroll-content">
+            <div class="scroll-content-inner">
+                <div class="strip-item"><span class="strip-text">✦ جميع الأفكار</span><img src="https://i.ibb.co/7NGhpKkh/pngwing-com-94.png" class="strip-icon" alt="فكرة"></div>
+                <div class="strip-item"><span class="strip-text">من ابتكاري</span><img src="https://i.ibb.co/5xSGvSnW/pngwing-com-96.png" class="strip-icon" alt="إبداع"></div>
+                <div class="strip-item"><span class="strip-text">🔐 كشف الرقم السري</span><img src="https://i.ibb.co/7JbPVrhC/pngwing-com-87.png" class="strip-icon" alt="مفتاح"></div>
+                <div class="strip-item"><span class="strip-text">🧊 المكعب السحري</span><img src="https://i.ibb.co/0yNLcqP7/pngwing-com-91.png" class="strip-icon" alt="مكعب"></div>
+                <div class="strip-item"><span class="strip-text">📐 دائرة الوحدة</span><img src="https://i.ibb.co/8n5VtB3b/pngwing-com-81.png" class="strip-icon" alt="مسطرة"></div>
+                <div class="strip-item"><span class="strip-text">⚽ الكرة الذكية</span><img src="https://i.ibb.co/99QzQG5x/IMG.jpg" class="strip-icon" alt="كرة ذكية"></div>
+                <div class="strip-item"><span class="strip-text">⚡ تحديات ذهنية</span><img src="https://i.ibb.co/pr4rpRbb/pngwing-com-83.png" class="strip-icon" alt="تحدي"></div>
+                <div class="strip-item"><span class="strip-highlight">Kamal Jbour</span><img src="https://i.ibb.co/KzhBtR8C/pngwing-com-80.png" class="strip-icon" alt="نجمة"></div>
+                <div class="strip-item"><span class="strip-text">✦</span></div>
+            </div>
+            <div class="scroll-content-inner">
+                <div class="strip-item"><span class="strip-text">✦ جميع الأفكار</span><img src="https://i.ibb.co/7NGhpKkh/pngwing-com-94.png" class="strip-icon" alt="فكرة"></div>
+                <div class="strip-item"><span class="strip-text">من ابتكاري</span><img src="https://i.ibb.co/5xSGvSnW/pngwing-com-96.png" class="strip-icon" alt="إبداع"></div>
+                <div class="strip-item"><span class="strip-text">🔐 كشف الرقم السري</span><img src="https://i.ibb.co/7JbPVrhC/pngwing-com-87.png" class="strip-icon" alt="مفتاح"></div>
+                <div class="strip-item"><span class="strip-text">🧊 المكعب السحري</span><img src="https://i.ibb.co/0yNLcqP7/pngwing-com-91.png" class="strip-icon" alt="مكعب"></div>
+                <div class="strip-item"><span class="strip-text">📐 دائرة الوحدة</span><img src="https://i.ibb.co/8n5VtB3b/pngwing-com-81.png" class="strip-icon" alt="مسطرة"></div>
+                <div class="strip-item"><span class="strip-text">⚽ الكرة الذكية</span><img src="https://i.ibb.co/99QzQG5x/IMG.jpg" class="strip-icon" alt="كرة ذكية"></div>
+                <div class="strip-item"><span class="strip-text">⚡ تحديات ذهنية</span><img src="https://i.ibb.co/pr4rpRbb/pngwing-com-83.png" class="strip-icon" alt="تحدي"></div>
+                <div class="strip-item"><span class="strip-highlight">Kamal Jbour</span><img src="https://i.ibb.co/KzhBtR8C/pngwing-com-80.png" class="strip-icon" alt="نجمة"></div>
+                <div class="strip-item"><span class="strip-text">✦</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="logo"><span class="letter-k">K</span><span class="letter-j">J</span></div>
+        <div class="nav-links"><a href="#home">الرئيسية</a><a href="#projects">أعمالي</a><a href="#contact">اتصل بي</a></div>
+        <button onclick="sharePage()" class="share-page-btn"><i class="fas fa-share-alt"></i> مشاركة</button>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>مرحباً، أنا <span class="typed-text"></span></h1>
+            <p>أبتكر تحديات فكرية وألعاباً ذهنية تحفز العقل وتنمي التفكير الإبداعي. صممت العديد من الأفكار الرياضية مثل كشف الرقم السري والمكعب السحري ودائرة الوحدة والكرة الذكية.</p>
+            <a href="#projects" class="btn">استكشف أفكاري</a>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">أفكاري المبتكرة</h2>
+        <div class="projects-grid">
+            <!-- المشروع 1: كشف الرقم السري -->
+            <div class="project-card">
+                <div class="project-icon">🔐</div>
+                <h3>كشف الرقم السري</h3>
+                <p>فكرة رياضية تفاعلية تتحدى ذكاءك في اكتشاف منطق الأرقام المخفية</p>
+                <div class="project-links">
+                    <a href="https://kamaljnoor.vercel.app/" target="_blank" class="project-link">النسخة الأساسية</a>
+                    <a href="https://secret-number-kamal1.vercel.app/" target="_blank" class="project-link">نسخة إضافية</a>
+                </div>
+                <div class="like-container"><button class="like-btn" onclick="toggleLike(this)"><i class="fas fa-heart like-icon"></i><span class="like-count">15</span></button></div>
+            </div>
+            
+            <!-- المشروع 2: المكعب السحري -->
+            <div class="project-card">
+                <div class="project-icon">🧊</div>
+                <h3>المكعب السحري</h3>
+                <p>فكرة تعتمد الأرقام بدل الألوان في حل المكعب</p>
+                <div class="project-links">
+                    <a href="https://kamaljboor123.github.io/magic-cubic-1/" target="_blank" class="project-link">النسخة الأساسية</a>
+                    <a href="https://kamaljboor123.github.io/magic-cubic-2/" target="_blank" class="project-link">نسخة إضافية</a>
+                </div>
+                <div class="like-container"><button class="like-btn" onclick="toggleLike(this)"><i class="fas fa-heart like-icon"></i><span class="like-count">8</span></button></div>
+            </div>
+            
+            <!-- المشروع 3: دائرة الوحدة -->
+            <div class="project-card">
+                <div class="project-icon">📐</div>
+                <h3>⚡ دائرة الوحدة</h3>
+                <p>فكرة تعليمية مبتكرة لتعلم رياضيات الزوايا بالمشاهدة والبطاقات التفاعلية</p>
+                <div class="project-links">
+                    <a href="https://kamaljboor123.github.io/unit-circle2/" target="_blank" class="project-link">استكشف الدائرة</a>
+                </div>
+                <div class="like-container"><button class="like-btn" onclick="toggleLike(this)"><i class="fas fa-heart like-icon"></i><span class="like-count">5</span></button></div>
+            </div>
+            
+            <!-- المشروع 4: الكرة الذكية -->
+            <div class="project-card">
+                <div class="project-icon">⚽</div>
+                <h3>الكرة الذكية</h3>
+                <p>كرة روبيك ثلاثية الأبعاد تنطق باسمي KAMAL J، بتصميم فريد وتفاعل ذكي مع الأحرف</p>
+                <div class="project-links">
+                    <a href="https://kamaljboor123.github.io/kamal-s-sphere-/" target="_blank" class="project-link">جرب الكرة الذكية</a>
+                </div>
+                <div class="like-container"><button class="like-btn" onclick="toggleLike(this)"><i class="fas fa-heart like-icon"></i><span class="like-count">0</span></button></div>
+            </div>
+            
+            <!-- المشروع 5: المربع التعليمي التفاعلي -->
+            <div class="project-card">
+                <div class="project-icon">🧩</div>
+                <h3>المربع التعليمي التفاعلي</h3>
+                <p>مربع سحري تعليمي يتحدى ذكاءك في ترتيب الأرقام لتحقيق المجموع السحري</p>
+                <div class="project-links">
+                    <a href="https://kamaljboor123.github.io/number-s-square-/" target="_blank" class="project-link">جرب المربع السحري</a>
+                </div>
+                <div class="like-container"><button class="like-btn" onclick="toggleLike(this)"><i class="fas fa-heart like-icon"></i><span class="like-count">0</span></button></div>
+            </div>
+
+            <!-- المشروع 6: الدائرة التفاعلية (جديد) -->
+            <div class="project-card">
+                <div class="project-icon">⚡</div>
+                <h3>الدائرة التفاعلية</h3>
+                <p>تطبيق تفاعلي لتعلم هندسة الدائرة: تمارين، معادلات فيثاغورس والزوايا، وحساب المساحات بشكل حيوي ومباشر.</p>
+                <div class="project-links">
+                    <a href="https://kamaljboor123.github.io/geometry-interactive-circle/" target="_blank" class="project-link">
+                        <i class="fas fa-link"></i> جرب الدائرة التفاعلية
+                    </a>
+                </div>
+                <div class="like-container">
+                    <button class="like-btn" onclick="toggleLike(this)">
+                        <i class="fas fa-heart like-icon"></i>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">تواصل معي</h2>
+        <div class="contact-links">
+            <a href="mailto:kamaljboor.123@gmail.com" class="contact-link"><i class="fas fa-envelope"></i><span>البريد الإلكتروني</span></a>
+            <a href="https://www.facebook.com/Kamaljboor9" target="_blank" class="contact-link"><i class="fab fa-facebook"></i><span>فيسبوك</span></a>
+            <a href="https://www.instagram.com/kamal_jbour/" target="_blank" class="contact-link"><i class="fab fa-instagram"></i><span>إنستغرام</span></a>
+        </div>
+        <div class="contact-form">
+            <form onsubmit="sendEmail(event)">
+                <input type="text" placeholder="الاسم" id="name" required>
+                <input type="email" placeholder="البريد الإلكتروني" id="email" required>
+                <textarea placeholder="رسالتك..." id="message" rows="4" required></textarea>
+                <button type="submit" class="btn" style="width: 100%;">إرسال الرسالة</button>
+            </form>
+        </div>
+        <div class="visitor-counter">
+            <p>👥 عدد زوار هذا الموقع: <img src="https://visitor-badge.laobi.icu/badge?page_id=kamaljboor123.github.io" alt="عدد الزوار" style="vertical-align: middle;"></p>
+        </div>
+    </section>
+
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
+
+    <script>
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+        const particleCount = 40;
+        const connectionDistance = 150;
+
+        function initParticles() {
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    size: Math.random() * 3 + 1,
+                    color: `rgba(${Math.random() * 100 + 100}, ${Math.random() * 200 + 55}, ${Math.random() * 100 + 155}, 0.4)`
+                });
+            }
+        }
+
+        function resizeCanvas() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            particles = [];
+            initParticles();
+        }
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.fill();
+            });
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < connectionDistance) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(0, 255, 157, ${0.2 * (1 - distance / connectionDistance)})`;
+                        ctx.lineWidth = 1;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(drawParticles);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+        drawParticles();
+
+        (function() {
+            const typedText = document.querySelector(".typed-text");
+            if (!typedText) return;
+            const phrases = ["مصمم أفكار", "مبتكر تحديات", "مهندس ألعاب ذهنية"];
+            let phraseIndex = 0, charIndex = 0, isDeleting = false, currentText = "";
+            function type() {
+                const currentPhrase = phrases[phraseIndex];
+                if (isDeleting) { currentText = currentPhrase.substring(0, charIndex - 1); charIndex--; }
+                else { currentText = currentPhrase.substring(0, charIndex + 1); charIndex++; }
+                typedText.textContent = currentText;
+                if (!isDeleting && charIndex === currentPhrase.length) { isDeleting = true; setTimeout(type, 2000); }
+                else if (isDeleting && charIndex === 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; setTimeout(type, 500); }
+                else { setTimeout(type, isDeleting ? 50 : 100); }
+            }
+            setTimeout(type, 1000);
+        })();
+
+        window.toggleLike = function(btn) {
+            const countSpan = btn.querySelector('.like-count');
+            let count = parseInt(countSpan.textContent);
+            btn.classList.toggle('liked');
+            countSpan.textContent = btn.classList.contains('liked') ? count + 1 : count - 1;
+        };
+
+        window.sharePage = function() {
+            if (navigator.share) { navigator.share({ title: 'Kamal Jbour - مصمم أفكار', text: 'اكتشف عالم الأفكار والتحديات الذهنية', url: window.location.href }).catch(() => copyToClipboard(window.location.href)); }
+            else { copyToClipboard(window.location.href); }
+        };
+
+        function copyToClipboard(text) {
+            if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(() => alert('✅ تم نسخ الرابط بنجاح')).catch(() => fallbackCopy(text)); }
+            else { fallbackCopy(text); }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try { document.execCommand('copy'); alert('✅ تم نسخ الرابط بنجاح'); }
+            catch(err) { prompt('انسخ الرابط:', text); }
+            document.body.removeChild(textarea);
+        }
+
+        window.sendEmail = function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (!name || !email || !message) { alert('❌ يرجى ملء جميع الحقول'); return; }
+            const subject = encodeURIComponent(`رسالة من ${name} عبر موقعك`);
+            const body = encodeURIComponent(`الاسم: ${name}\nالبريد الإلكتروني: ${email}\n\nالرسالة:\n${message}`);
+            window.location.href = `mailto:kamaljboor.123@gmail.com?subject=${subject}&body=${body}`;
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        };
+
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTop');
+            if (window.scrollY > 500) btn.classList.add('show');
+            else btn.classList.remove('show');
+        });
+
+        window.scrollToTop = function() { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    </script>
+</body>
+</html> { opacity: 1; }
         .back-to-top:hover { transform: translateY(-5px); }
         @media (max-width: 768px) { .navbar { flex-direction: column; gap: 0.5rem; } .hero-content h1 { font-size: 2.2rem; } .projects-grid { grid-template-columns: 1fr; } }
         @media (max-width: 480px) { .hero-content h1 { font-size: 1.8rem; } .btn { padding: 1rem 2rem; } }
